@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1A1B22"
+    android:id="@+id/main_layout"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_margin="14dp"
+        android:padding="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/back_img"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:padding="6dp"
+        android:background="@drawable/bg_corner"
+        android:src="@drawable/baseline_more_vert_24"
+        android:id="@+id/more_vert_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:padding="6dp"
+        android:background="@drawable/bg_corner"
+        android:src="@drawable/baseline_bookmark_border_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/more_vert_24"
+        android:id="@+id/bookmark_border_24"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:padding="6dp"
+        android:background="@drawable/bg_corner"
+        android:src="@drawable/baseline_share_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/bookmark_border_24"
+        android:id="@+id/share_24"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:adjustViewBounds="true"
+        android:visibility="invisible"
+        android:padding="6dp"
+        android:background="@drawable/bg_corner"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toBottomOf="@id/share_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/title_img"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_marginBottom="22dp"
+        android:layout_marginTop="22dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/title_img"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+    <TextView
+        android:fontFamily="@font/poppins_semi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:padding="24dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/text_title"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:paddingLeft="24dp"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        android:drawablePadding="6dp"
+        android:drawableLeft="@drawable/baseline_calendar_month_24"
+        android:id="@+id/text_times"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="24dp"
+        android:textColor="#FFFFFF"
+        android:drawablePadding="6dp"
+        android:textAlignment="gravity"
+        app:layout_constraintStart_toEndOf="@id/text_times"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        android:drawableLeft="@drawable/baseline_remove_red_eye_24"
+        android:id="@+id/text_eyes"/>
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@id/text_eyes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="44dp"
+            android:textSize="16dp"
+            android:padding="18dp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/discreption"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+    <TextView
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/counter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
